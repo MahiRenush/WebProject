@@ -1,4 +1,4 @@
-package mainServ;
+package com.FeeManage;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,16 +9,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class mainServ extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private static final long serialVersionUID = 1L;
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String uname= request.getParameter("uname");
 		String pass= request.getParameter("upass");
 		PrintWriter out= response.getWriter();
-		
-		if(uname=="Mahi")
+		if(uname.equalsIgnoreCase("Mahi"))
 		{
-			if(pass=="123")
+			if(pass.equalsIgnoreCase("123"))
 			{
 				out.println("The account has been logged in");
 			}
+			else{
+				out.println("This is the right admin");
+			}
+			
 		}
+		else
+			out.println("Login failed");
 	}
+}
