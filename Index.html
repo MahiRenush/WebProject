@@ -1,12 +1,10 @@
-# WebProject
-Using servlets and Jsp
 <!DOCTYPE html>
 <html>
 <head>
 <!-- the width of the page is set to vary acc to device and 
 the initial zooming level is fixed to some default  -->
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
 
 
 </head>
@@ -19,9 +17,35 @@ the initial zooming level is fixed to some default  -->
  	</h3>
 <br/> <br/>
 <h4 align="center"> Admin account</h4>
-<form action="Output.jsp">
-Enter the admin name<input type="text" name="uname">
-Type admin password<input type="password" name="upass">
+<form action="loginpage" method="post">
+<br>
+<table><tr><td>
+    <div style="border-bottom-style: solid; border-bottom-width: 1px; padding-bottom: 1px">
+    <h2><font size="6">       Fee Management System
+    </font></h2>
+        </div>
+    </td></tr></table>
+     
+<table><tr><td>
+    <h2><font size="1"> </font></h2>
+    <h2>Login Authentication</h2></td></tr></table>
+<table style="border:1px solid #000000;background-color:#efefef;">
+<tr><td colspan=2></td></tr>
+<tr><td colspan=2> </td></tr>
+  <tr>
+  <td><b><font size="4">Login Name</font></b></td>
+  <td><input type="text" name="uname" value=""></td>
+  </tr>
+  <tr>
+  <td><b><font size="4">Password</font></b></td>
+  <td><input type="password" name="upass" value=""></td>
+  </tr>
+  <tr>
+  <td height="29"></td>
+  <td height="29"><input type="submit" value="Submit"></td>
+  </tr>
+  <tr><td colspan=2> </td></tr>
+</table>
 </form>
 </body>
 </html>
