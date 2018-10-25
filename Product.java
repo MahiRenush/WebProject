@@ -1,9 +1,9 @@
 package com.Mahi;
 
-import java.io.File;
-import java.io.FileOutputStream;
+import java.io.*;
 
-public class Product {
+
+public class Product implements Serializable {
 	String prodID;
 	float cost;
 	int numberOfItems;
@@ -23,4 +23,6 @@ public class Product {
 	public float getCost() {
 		return cost;
 	}
-}
+	public int getNumberOfITems(){
+		return numberOfItems;
+	}
